@@ -53,3 +53,10 @@ directly under `src/` as well, write `src/**.js` instead (no slash before the
 `compile()` throws `TypeError` if `pattern` is not a string or contains a line
 terminator (`\n` or `\r`), since either would produce a silently broken
 regex.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
