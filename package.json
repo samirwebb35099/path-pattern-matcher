@@ -1,6 +1,6 @@
 {
   "name": "path-pattern-matcher",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Matches file paths against simple glob patterns containing single and double asterisks without invoking a full glob engine.",
   "type": "module",
   "main": "src/index.js",
